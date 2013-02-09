@@ -11,8 +11,8 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.sun6i:root/fstab.sun6i \
     $(LOCAL_PATH)/init.sun6i.rc:root/init.sun6i.rc
+    #$(LOCAL_PATH)/fstab.sun6i:root/fstab.sun6i
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
