@@ -1,5 +1,5 @@
 # include common makefile
-$(call inherit-product, device/allwinner/sun6i-common/common.mk)
+$(call inherit-product, device/allwinner/sun6i-common/device_common.mk)
 
 LOCAL_PATH := device/allwinner/novo9
 
@@ -9,10 +9,11 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_configs := xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# Init files
+# Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.sun6i.rc:root/init.sun6i.rc
-    #$(LOCAL_PATH)/fstab.sun6i:root/fstab.sun6i
+    $(COMMON_PATH)/prebuilt/modules/nand.ko:recovery/root/nand.ko \
+    $(LOCAL_PATH)/recovery/keyboard.ko:recovery/root/keyboard.ko \
+    $(LOCAL_PATH)/recovery/touch.ko:recovery/root/touch.ko
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -20,10 +21,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only \
-    ro.sf.lcd_density=320 \
-    ro.config.facelock=enable_facelock \
-    persist.facelock.detect_cutoff=5000 \
-    persist.facelock.recog_cutoff=5000
+    ro.sf.lcd_density=320
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     wifi.interface=wlan0 \
