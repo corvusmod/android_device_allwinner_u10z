@@ -16,6 +16,6 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := novo9
 PRODUCT_NAME := cm_novo9
-PRODUCT_BRAND := Ainol
-PRODUCT_MODEL := Ainol Novo9
-PRODUCT_MANUFACTURER := Ainol
+PRODUCT_BRAND := ainol
+PRODUCT_MODEL := novo9
+PRODUCT_MANUFACTURER := Allwinner
