@@ -22,7 +22,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($TARGET_DEVICE),novo9)
+ifeq ($TARGET_DEVICE),u10z)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

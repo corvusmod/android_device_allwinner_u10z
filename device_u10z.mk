@@ -1,7 +1,7 @@
 # include common makefile
 $(call inherit-product, device/allwinner/sun6i-common/device_common.mk)
 
-LOCAL_PATH := device/allwinner/novo9
+LOCAL_PATH := device/allwinner/u10z
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -33,7 +33,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.sys.strictmode.disable=1 \
     persist.ro.hardware=sun6i \
     ro.product.manufacturer=Allwinner \
-    ro.product.model=novo9 \
+    ro.product.model=u10z \
     ro.product.board=exdroid
 
 # Debug
@@ -41,4 +41,4 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.debuggable=1
 
-$(call inherit-product-if-exists, vendor/allwinner/novo9/novo9-vendor.mk)
+$(call inherit-product-if-exists, vendor/allwinner/u10z/u10z-vendor.mk)

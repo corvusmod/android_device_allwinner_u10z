@@ -1,4 +1,4 @@
-# novo9 fstab 
+# u10z fstab 
 /dev/block/nandd        /system     ext4    ro,noatime,nodev,barrier=0,noauto_da_alloc,nodev                    wait
 /dev/block/nandh        /cache      ext4    noatime,nosuid,nodev,barrier=0,nodev                                wait,check
 /dev/block/nande        /data       ext4    noatime,nodiratime,nosuid,nodev,barrier=0,noauto_da_alloc,nodev     wait,check
